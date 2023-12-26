@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'basiicmedium';
+    src: url('basiic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+}
+.buttons img{
+    position: sticky;
+    margin: auto;
+   }
+   
+.borderimg1 { 
+  border: 9px solid transparent;
+  padding: 1px;
+  border-image: url(border.png) 30 round;
+  background:#000
+}
+body {
+  font-family: 'basiicmedium';
+  list-style-image: url('lister.gif');
+  background-image: url("lsddream.gif");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 50px;
+
+}
+
+h1 {
+  font-size: 40px;
+    color: whitesmoke
+}
+h2 {
+  font-size: 24px;
+    color:whitesmoke
+
+}
+h3 {
+ 
+}
