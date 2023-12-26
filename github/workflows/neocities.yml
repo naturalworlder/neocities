@@ -1,18 +1,24 @@
 name: Deploy to neocities
 
-# only run on changes to main
+# only run on changes to master
 on:
   push:
     branches:
       - main
+
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      name: Use Node.js
+    - uses: actions/checkout@v3
+    # Set up any tools and build steps here
+    # This example uses a Node.js toolchain to build a site
+    - name: Use Node.js
       uses: actions/setup-node@v3
       with:
         node-version: lts/*
